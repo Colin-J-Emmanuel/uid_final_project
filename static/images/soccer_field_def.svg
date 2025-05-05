@@ -1,0 +1,48 @@
+<svg viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soccer field background -->
+  <rect width="720" height="480" fill="#4CAF50" />
+  
+  <!-- Field outlines -->
+  <rect x="10" y="10" width="700" height="460" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Center line -->
+  <line x1="360" y1="10" x2="360" y2="470" stroke="white" stroke-width="2" />
+  
+  <!-- Center circle -->
+  <circle cx="360" cy="240" r="60" stroke="white" stroke-width="2" fill="none" />
+  <circle cx="360" cy="240" r="3" fill="white" />
+  
+  <!-- Penalty areas -->
+  <rect x="10" y="130" width="120" height="220" stroke="white" stroke-width="2" fill="none" />
+  <rect x="590" y="130" width="120" height="220" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Goal areas -->
+  <rect x="10" y="180" width="50" height="120" stroke="white" stroke-width="2" fill="none" />
+  <rect x="660" y="180" width="50" height="120" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Position markers - color coded circles with text -->
+  <!-- Goalkeeper (GK) - Yellow -->
+  <circle cx="40" cy="240" r="30" fill="#FDD835" stroke="#333" stroke-width="1" opacity="0.6" />
+  <text x="40" y="245" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">GK</text>
+  
+  <!-- Defenders (DEF) - Light blue and HIGHLIGHTED -->
+  <circle cx="140" cy="160" r="30" fill="#BBDEFB" stroke="#1E88E5" stroke-width="4" />
+  <text x="140" y="165" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">DEF</text>
+  
+  <circle cx="140" cy="320" r="30" fill="#BBDEFB" stroke="#1E88E5" stroke-width="4" />
+  <text x="140" y="325" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">DEF</text>
+  
+  <!-- Midfielders (MID) - Light green -->
+  <circle cx="360" cy="240" r="30" fill="#C8E6C9" stroke="#333" stroke-width="1" opacity="0.6" />
+  <text x="360" y="245" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">MID</text>
+  
+  <!-- Forwards (FWD) - Light pink -->
+  <circle cx="580" cy="160" r="30" fill="#F8BBD0" stroke="#333" stroke-width="1" opacity="0.6" />
+  <text x="580" y="165" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">FWD</text>
+  
+  <circle cx="580" cy="320" r="30" fill="#F8BBD0" stroke="#333" stroke-width="1" opacity="0.6" />
+  <text x="580" y="325" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">FWD</text>
+  
+  <!-- DEF Responsibility Area Highlight -->
+  <path d="M10,130 L230,130 L230,350 L10,350 Z" stroke="#1E88E5" stroke-width="3" stroke-dasharray="10,5" fill="rgba(30, 136, 229, 0.1)" />
+</svg>

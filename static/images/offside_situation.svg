@@ -1,0 +1,44 @@
+<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soccer field background - half field -->
+  <rect width="720" height="360" fill="#4CAF50" />
+  
+  <!-- Field outlines -->
+  <rect x="10" y="10" width="700" height="340" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Center line -->
+  <line x1="360" y1="10" x2="360" y2="350" stroke="#FFEB3B" stroke-width="3" />
+  
+  <!-- Penalty area -->
+  <rect x="590" y="80" width="120" height="200" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Goal area -->
+  <rect x="660" y="130" width="50" height="100" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Ball -->
+  <circle cx="200" cy="240" r="10" fill="white" stroke="#333" stroke-width="1" />
+  
+  <!-- Players - Team A (red) -->
+  <circle cx="80" cy="120" r="20" fill="#EF5350" stroke="#333" stroke-width="1" />
+  <text x="80" y="125" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">A1</text>
+  
+  <circle cx="200" cy="240" r="20" fill="#EF5350" stroke="#333" stroke-width="1" />
+  <text x="200" y="245" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">A3</text>
+  
+  <circle cx="530" cy="180" r="20" fill="#EF5350" stroke="#333" stroke-width="1" />
+  <text x="530" y="185" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">A2</text>
+  
+  <!-- Players - Team B (blue) - Defenders -->
+  <circle cx="450" cy="120" r="20" fill="#42A5F5" stroke="#333" stroke-width="1" />
+  <text x="450" y="125" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">D1</text>
+  
+  <circle cx="430" cy="240" r="20" fill="#42A5F5" stroke="#333" stroke-width="1" />
+  <text x="430" y="245" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">D2</text>
+  
+  <!-- Line showing pass direction -->
+  <line x1="200" y1="240" x2="530" y2="180" stroke="white" stroke-width="3" stroke-dasharray="10,5" />
+  <polygon points="520,180 500,170 510,190" fill="white" />
+  
+  <!-- Offside line -->
+  <line x1="450" y1="10" x2="450" y2="350" stroke="red" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="470" y="30" font-family="Arial" font-size="14" fill="red">Second-last defender line</text>
+</svg>

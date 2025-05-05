@@ -1,0 +1,218 @@
+/* Base variables for consistent colors and spacing */
+:root {
+    --base-color: #228B22;  /* Forest Green - Soccer field */
+    --accent-color: #72b5f7; /* Light Blue - Accent/highlights */
+    --light-grey: #f8f9fa;  /* Light background areas */
+    --dark-grey: #343a40;   /* Text and secondary elements */
+    --spacing-unit: 1rem;
+}
+
+/* Global styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grey);
+    background-color: var(--light-grey);
+    padding-top: 60px; /* For fixed navbar */
+}
+
+/* Typography */
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--base-color);
+    margin-bottom: var(--spacing-unit);
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-unit);
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.font-brand {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark-grey) !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* Progress bar */
+.progress {
+    height: 20px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    background-color: var(--light-grey);
+    border-radius: 0;
+}
+
+#site-progress-bar {
+    transition: width 0.5s ease-in-out;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* Content containers */
+.content-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: var(--spacing-unit);
+    margin-bottom: var(--spacing-unit) * 2;
+}
+
+/* Learning module */
+.learning-module {
+    margin-top: 2rem;
+}
+
+.item-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--base-color);
+    margin-bottom: var(--spacing-unit);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.item-detail {
+    margin-bottom: var(--spacing-unit) * 2;
+}
+
+#img-style {
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-unit) * 2;
+}
+
+/* Key concept highlight */
+.key-concept {
+    background-color: rgba(34, 139, 34, 0.05);
+    border-left: 4px solid var(--base-color);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    font-weight: 600;
+}
+
+.btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-success {
+    background-color: var(--base-color);
+    border-color: var(--base-color);
+    font-weight: 600;
+}
+
+.btn-outline-success {
+    color: var(--base-color);
+    border-color: var(--base-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .item-title {
+        font-size: 1.5rem;
+    }
+    
+    #img-style {
+        height: 300px;
+    }
+    
+    #search_results {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Maintain existing styles from original CSS */
+.space-bottom {
+    margin-bottom: 20px;
+}
+
+.spacing-small {
+    padding: 20px;
+}
+
+.padding {
+    padding: 20px;
+    margin: 30px;
+}
+
+.result_header {
+    padding-top: 20px;
+}
+
+.space {
+    margin: 30px;
+}
+
+#item-row {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#title-learn {
+    padding: 30px 0;
+    font-size: 16px;
+}
+
+#alert-success {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.alert {
+    width: 300px;
+}
+
+#search_results {
+    margin-top: 80px;
+}
+
+.centered-image {
+    width: 35%;
+    max-width: 200px;
+    height: auto;
+}

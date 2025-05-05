@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row" id="item-row">
+    <div class="col-md-8">
+        <div class="item-detail">
+            <div class="item-title fw-bold">
+                    Question: {{item.title}}
+            </div>
+            <img src="{{ item.image }}" class="img-fluid" id="img-style" alt="{{item.title}} image">
+        </div>
+    </div>
+    <div class="col-md-4" id="search_results">
+        
+        <p class="desc mt-2">{{item.question}}</p>
+
+        <div class="answer-buttons" id="answers">
+            <!-- answers go here --> 
+        </div>
+
+        <div class="navigation-buttons">
+            <!-- Previous button -->
+            {% if item.id|int > 1 %}
+                <a class="btn btn-sm btn-outline-primary" href="/quiz/{{item.id|int - 1}}">Previous</a>
+            {% endif %}
+        
+            <!-- Conditional logic for Next or Quiz button -->
+            {% if item.id|int < 5 %}
+                <!-- Next button -->
+                <a class="btn btn-sm btn-outline-primary" href="/quiz/{{item.id|int + 1}}">Next</a>
+            {% else %}
+                <!-- Quiz button if item.id >= 9 -->
+                <a class="btn btn-sm btn-outline-success" href="/results"> Quiz Results</a>
+            {% endif %}
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+
+    
+<script> 
+    let my_item= {{ item | tojson }}
+</script>
+
+{% endblock %}

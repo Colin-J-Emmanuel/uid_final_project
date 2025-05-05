@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts - Montserrat for strong readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{{ url_for('static', filename = 'search.js') }}"></script>
+
+    <title>Soccer Rules and Positioning | Learn Soccer Fundamentals</title>
+  </head>
+
+  <body>  
+    <!-- Navbar with improved styling -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand font-brand" href="/" style="color: #72b5f7;">
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Progress bar with improved styling -->
+    <div class="progress">
+      <div id="site-progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+        aria-valuemin="0" aria-valuemax="100">
+        0%
+      </div>
+    </div>
+  
+    <!-- Main content container -->
+    <div class="container mt-5" id="search_results">   
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-light mt-5 py-3">
+      <div class="container text-center">
+        <p class="text-muted mb-0">Soccer Positioning Rules | Learn the Fundamentals</p>
+      </div>
+    </footer>
+
+    {% block scripts %}
+    {% endblock %}
+  
+    <script>
+      // Progress bar functionality
+      function updateProgressBar() {
+        let path = window.location.pathname;
+        let progress = 0;
+        let colorClass = "bg-info"; // default light blue
+
+        if (path === "/") {
+          progress = 0;
+          colorClass = "bg-secondary"; // grey
+        } else if (path.startsWith("/learn/")) {
+          let id = parseInt(path.split("/")[2]);
+          progress = id * 10; // 10%-50%
+          colorClass = "bg-info"; // light blue for learning
+        } else if (path.startsWith("/quiz/")) {
+          let id = parseInt(path.split("/")[2]);
+          progress = 50 + id * 10; // 60%-90%
+          colorClass = "bg-success"; // green for quiz
+        } else if (path.startsWith("/results")) {
+          progress = 100;
+          colorClass = "bg-success"; // dark green for results
+        }
+
+        progress = Math.min(100, Math.max(0, progress));
+
+        const progressBar = document.getElementById("site-progress-bar");
+
+        // Remove any existing color classes
+        progressBar.classList.remove("bg-secondary", "bg-info", "bg-success");
+
+        // Add new color class
+        progressBar.classList.add(colorClass);
+
+        progressBar.style.width = progress + "%";
+        progressBar.setAttribute("aria-valuenow", progress);
+        progressBar.innerText = progress + "%";
+      }
+
+      document.addEventListener("DOMContentLoaded", updateProgressBar);
+    </script>
+
+  </body>
+</html><i class="bi bi-dribbble"></i> Soccer Positioning Rules
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/learn/1">
+                <i class="bi bi-book"></i> Learn
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/quiz/1">
+                <i class="bi bi-question-circle"></i> Quiz
+              </a>

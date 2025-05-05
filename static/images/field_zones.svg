@@ -1,0 +1,38 @@
+<svg viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soccer field background -->
+  <rect width="720" height="480" fill="#4CAF50" />
+  
+  <!-- Field outlines -->
+  <rect x="10" y="10" width="700" height="460" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Center line -->
+  <line x1="360" y1="10" x2="360" y2="470" stroke="white" stroke-width="2" />
+  
+  <!-- Center circle -->
+  <circle cx="360" cy="240" r="60" stroke="white" stroke-width="2" fill="none" />
+  <circle cx="360" cy="240" r="3" fill="white" />
+  
+  <!-- Penalty areas -->
+  <rect x="10" y="130" width="120" height="220" stroke="white" stroke-width="2" fill="none" />
+  <rect x="590" y="130" width="120" height="220" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Goal areas -->
+  <rect x="10" y="180" width="50" height="120" stroke="white" stroke-width="2" fill="none" />
+  <rect x="660" y="180" width="50" height="120" stroke="white" stroke-width="2" fill="none" />
+  
+  <!-- Field zones -->
+  <!-- Defensive third -->
+  <rect x="10" y="10" width="230" height="460" fill="rgba(33, 150, 243, 0.3)" stroke="white" stroke-width="2" />
+  <text x="125" y="50" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Zone A</text>
+  <text x="125" y="80" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Defensive Third</text>
+  
+  <!-- Middle third -->
+  <rect x="240" y="10" width="240" height="460" fill="rgba(255, 193, 7, 0.3)" stroke="white" stroke-width="2" />
+  <text x="360" y="50" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Zone B</text>
+  <text x="360" y="80" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Middle Third</text>
+  
+  <!-- Final third -->
+  <rect x="480" y="10" width="230" height="460" fill="rgba(233, 30, 99, 0.3)" stroke="white" stroke-width="2" />
+  <text x="595" y="50" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Zone C</text>
+  <text x="595" y="80" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Final Third</text>
+</svg>
