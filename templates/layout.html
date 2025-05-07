@@ -31,17 +31,24 @@
   </head>
 
   <body>  
-    <!-- Navbar with improved styling -->
+    <!-- Navbar with improved styling but keeping the original structure -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand font-brand" href="/" style="color: #72b5f7;">
-          </ul>
-        </div>
+      <div class="container-fluid">
+        <a class="navbar-brand font-brand" href="/" style="color: #72b5f7;">Soccer Positioning Rules</a>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/learn/1">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/quiz/1">Quiz</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <!-- Progress bar with improved styling -->
-    <div class="progress">
+    <!-- Progress bar with improved styling - only shown on non-homepage -->
+    <div class="progress" id="progress-container" style="{% if request.path == '/' %}display: none;{% endif %}">
       <div id="site-progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
         aria-valuemin="0" aria-valuemax="100">
         0%
@@ -54,13 +61,6 @@
         {% endblock %}
     </div>
     
-    <!-- Footer -->
-    <footer class="bg-light mt-5 py-3">
-      <div class="container text-center">
-        <p class="text-muted mb-0">Soccer Positioning Rules | Learn the Fundamentals</p>
-      </div>
-    </footer>
-
     {% block scripts %}
     {% endblock %}
   
@@ -70,11 +70,17 @@
         let path = window.location.pathname;
         let progress = 0;
         let colorClass = "bg-info"; // default light blue
+        const progressContainer = document.getElementById("progress-container");
 
+        // Hide progress bar on homepage
         if (path === "/") {
-          progress = 0;
-          colorClass = "bg-secondary"; // grey
-        } else if (path.startsWith("/learn/")) {
+          progressContainer.style.display = "none";
+          return;
+        } else {
+          progressContainer.style.display = "block";
+        }
+
+        if (path.startsWith("/learn/")) {
           let id = parseInt(path.split("/")[2]);
           progress = id * 10; // 10%-50%
           colorClass = "bg-info"; // light blue for learning
@@ -106,22 +112,4 @@
     </script>
 
   </body>
-</html><i class="bi bi-dribbble"></i> Soccer Positioning Rules
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/learn/1">
-                <i class="bi bi-book"></i> Learn
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/quiz/1">
-                <i class="bi bi-question-circle"></i> Quiz
-              </a>
+</html>

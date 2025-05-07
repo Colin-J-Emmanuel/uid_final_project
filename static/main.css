@@ -12,14 +12,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-grey);
     background-color: var(--light-grey);
-    padding-top: 60px; /* For fixed navbar */
 }
 
 /* Typography */
 .title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2em;
     color: var(--base-color);
     margin-bottom: var(--spacing-unit);
 }
@@ -32,7 +31,6 @@ body {
 
 .lead {
     font-size: 1.25rem;
-    font-weight: 400;
 }
 
 /* Navigation */
@@ -42,17 +40,14 @@ body {
 
 .font-brand {
     font-weight: 700;
-    letter-spacing: -0.5px;
 }
 
 .nav-link {
     font-weight: 500;
-    color: var(--dark-grey) !important;
     transition: color 0.2s ease-in-out;
 }
 
-.nav-link:hover, 
-.nav-link.active {
+.nav-link:hover {
     color: var(--accent-color) !important;
 }
 
@@ -61,13 +56,11 @@ body {
     height: 20px;
     margin-top: 60px;
     margin-bottom: 20px;
-    background-color: var(--light-grey);
-    border-radius: 0;
 }
 
 #site-progress-bar {
     transition: width 0.5s ease-in-out;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.8rem;
 }
 
@@ -82,35 +75,35 @@ body {
 
 /* Learning module */
 .learning-module {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .item-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--base-color);
     margin-bottom: var(--spacing-unit);
-    border-bottom: 3px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
     display: inline-block;
 }
 
 .item-detail {
-    margin-bottom: var(--spacing-unit) * 2;
+    margin-bottom: var(--spacing-unit);
 }
 
 #img-style {
     height: 400px;
     object-fit: cover;
     border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 4px;
 }
 
 .desc {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: var(--spacing-unit) * 2;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Key concept highlight */
@@ -119,51 +112,34 @@ body {
     border-left: 4px solid var(--base-color);
     padding: 1rem;
     margin: 1.5rem 0;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 4px 4px 0;
 }
 
 /* Navigation buttons */
 .navigation-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
-.btn-primary {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    font-weight: 600;
-}
-
-.btn-outline-primary {
+.btn-primary, .btn-outline-primary {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
-.btn-success {
-    background-color: var(--base-color);
-    border-color: var(--base-color);
-    font-weight: 600;
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
 }
 
-.btn-outline-success {
+.btn-success, .btn-outline-success {
     color: var(--base-color);
     border-color: var(--base-color);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .item-title {
-        font-size: 1.5rem;
-    }
-    
-    #img-style {
-        height: 300px;
-    }
-    
-    #search_results {
-        margin-top: 1.5rem;
-    }
+.btn-success {
+    background-color: var(--base-color);
+    color: white;
 }
 
 /* Maintain existing styles from original CSS */
@@ -215,4 +191,19 @@ body {
     width: 35%;
     max-width: 200px;
     height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .item-title {
+        font-size: 1.25rem;
+    }
+    
+    #img-style {
+        height: 300px;
+    }
+    
+    #search_results {
+        margin-top: 1.5rem;
+    }
 }
