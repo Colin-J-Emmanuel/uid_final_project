@@ -40,13 +40,25 @@
           <i class="fas fa-futbol me-2"></i>KickStart
         </a>
 
+        <!-- Modified navigation with button styling -->
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/learn/1">Learn</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/quiz/1">Quiz</a>
-          </li>
+          {% if request.path == '/' %}
+            <!-- Show buttons on homepage -->
+            <li class="nav-item me-2">
+              <a class="btn btn-outline-info" href="/learn/1">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-success" href="/quiz/1">Quiz</a>
+            </li>
+          {% else %}
+            <!-- Show regular nav links on other pages -->
+            <li class="nav-item">
+              <a class="nav-link" href="/learn/1">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/quiz/1">Quiz</a>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </nav>

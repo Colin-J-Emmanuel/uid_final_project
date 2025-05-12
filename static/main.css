@@ -51,6 +51,31 @@ body {
     color: var(--accent-color) !important;
 }
 
+/* Homepage navbar buttons - exactly matching your color scheme */
+.btn-outline-info {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    font-weight: 500;
+}
+
+.btn-outline-info:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.btn-outline-success {
+    color: var(--base-color);
+    border-color: var(--base-color);
+    font-weight: 500;
+}
+
+.btn-outline-success:hover {
+    background-color: var(--base-color);
+    border-color: var(--base-color);
+    color: white;
+}
+
 /* Progress bar */
 .progress {
     height: 20px;
@@ -164,6 +189,58 @@ body {
     padding: 1rem;
 }
 
+/* About Card Styles */
+.about-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(114, 181, 247, 0.05) 0%, rgba(34, 139, 34, 0.05) 100%);
+    border: 1px solid rgba(114, 181, 247, 0.1);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    border-color: var(--accent-color);
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--accent-color), var(--base-color));
+    color: white;
+    border-radius: 15px 15px 0 0;
+    border-bottom: none;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-body h6 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+}
+
+.modal-body h6:first-child {
+    margin-top: 0;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-top: 0;
+}
+
 /* Interactive Soccer Field */
 .soccer-field-preview {
     background-color: white;
@@ -253,6 +330,10 @@ body {
     }
     
     .soccer-field-preview {
+        padding: 1rem;
+    }
+    
+    .modal-body {
         padding: 1rem;
     }
 }

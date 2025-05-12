@@ -11,38 +11,62 @@
     <p class="lead">Learn to follow the game like a pro</p>
 </div>
 
-<!-- Interactive Preview Cards -->
+<!-- About KickStart Card - Replacing the two interactive cards -->
 <div class="container mb-5">
     <div class="row justify-content-center">
-        <!-- Quick Preview Card -->
-        <div class="col-md-4 mb-4">
-            <div class="feature-card card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="feature-icon text-center mb-3">
-                        <i class="fas fa-graduation-cap fa-3x" style="color: var(--accent-color);"></i>
+        <div class="col-md-8 mb-4">
+            <div class="about-card card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column text-center">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-info-circle fa-3x" style="color: var(--accent-color);"></i>
                     </div>
-                    <h5 class="card-title text-center">Learn Interactively</h5>
-                    <p class="card-text flex-grow-1">Master player positions, formations, and offside rules through visual lessons and diagrams.</p>
-                    <a href="/learn/1" class="btn btn-primary mt-auto">Start Learning</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quiz Preview Card -->
-        <div class="col-md-4 mb-4">
-            <div class="feature-card card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="feature-icon text-center mb-3">
-                        <i class="fas fa-question-circle fa-3x" style="color: var(--base-color);"></i>
-                    </div>
-                    <h5 class="card-title text-center">Test Your Knowledge</h5>
-                    <p class="card-text flex-grow-1">Challenge yourself with interactive quizzes to reinforce what you've learned.</p>
-                    <a href="/quiz/1" class="btn btn-success mt-auto">Take Quiz</a>
+                    <h5 class="card-title">About KickStart</h5>
+                    <p class="card-text">KickStart is your interactive guide to mastering soccer positioning and offside rules. Learn through visual diagrams, test your knowledge with quizzes, and become a more informed soccer enthusiast.</p>
+                    <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#aboutModal">Learn More</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutModalLabel">Welcome to KickStart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Main description at the top -->
+        <div class="text-center mb-4 p-3 rounded" style="background-color: rgba(34, 139, 34, 0.05);">
+          <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 0;">
+            KickStart is more than just a guide—it's your fun and interactive gateway into the world of soccer. Whether you're a total beginner or a self-proclaimed pro (you better be ready to prove it!), KickStart blends basic knowledge with engaging activities to make learning the game exciting and accessible. Our goal? To get you hooked on the sport— eager to hit the field or win every heated debate while watching matches with your friends. So come along—let's enjoy the game together.
+          </p>
+        </div>
+        
+        <!-- Features at the bottom -->
+        <div class="row">
+          <div class="col-md-6">
+            <h6><i class="fas fa-graduation-cap" style="color: var(--accent-color);"></i> Interactive Learning</h6>
+            <p>Master soccer fundamentals through engaging visual lessons. Our interactive diagrams and step-by-step explanations make complex positioning concepts easy to understand.</p>
+            
+            <h6><i class="fas fa-brain" style="color: var(--base-color);"></i> Test Your Knowledge</h6>
+            <p>Reinforce your learning with challenging quizzes designed to test your understanding of soccer positioning, formations, and offside rules.</p>
+          </div>
+          <div class="col-md-6">
+            <h6><i class="fas fa-chart-line" style="color: var(--accent-color);"></i> Track Your Progress</h6>
+            <p>Monitor your learning journey with our built-in progress tracker. See how far you've come and what you've mastered.</p>
+            
+            <h6><i class="fas fa-futbol" style="color: var(--base-color);"></i> Real-World Application</h6>
+            <p>Apply what you learn to better understand professional soccer matches. Become the fan who knows what's happening on the field!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Interactive Soccer Field Preview -->
 <div class="container mb-5">
@@ -99,7 +123,7 @@
     <div class="cta-section p-4 rounded" style="background-color: rgba(34, 139, 34, 0.1);">
         <h4 class="mb-3">Ready to Master Soccer Positioning?</h4>
         <p class="mb-4">Start your journey with our interactive lessons and become a soccer expert!</p>
-        <a href="/learn/1" class="btn btn-success btn-lg">Begin Your Journey</a>
+        <a href="/learn/1" class="btn btn-success btn-lg">Start</a>
     </div>
 </div>
 
