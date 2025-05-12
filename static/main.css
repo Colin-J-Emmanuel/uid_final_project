@@ -74,10 +74,6 @@ body {
 }
 
 /* Learning module */
-.learning-module {
-    margin-top: 1rem;
-}
-
 .item-title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -142,7 +138,71 @@ body {
     color: white;
 }
 
-/* Maintain existing styles from original CSS */
+/* Homepage specific styles */
+.mt-6 {
+    margin-top: 7rem !important;
+}
+
+/* Additional spacing for homepage title */
+.homepage-title {
+    padding-top: 2rem;
+}
+
+/* Feature Cards */
+.feature-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 12px;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+.feature-icon {
+    padding: 1rem;
+}
+
+/* Interactive Soccer Field */
+.soccer-field-preview {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.field-svg {
+    width: 100%;
+    height: auto;
+}
+
+.player-container {
+    cursor: pointer;
+}
+
+.player {
+    transition: transform 0.1s ease-out;
+    transform-origin: center;
+}
+
+.player:hover {
+    transform: scale(1.1);
+}
+
+.position-card {
+    background-color: rgba(114, 181, 247, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Call to Action Section */
+.cta-section {
+    border: 2px solid rgba(34, 139, 34, 0.2);
+}
+
+/* Utility classes */
 .space-bottom {
     margin-bottom: 20px;
 }
@@ -151,36 +211,13 @@ body {
     padding: 20px;
 }
 
-.padding {
-    padding: 20px;
-    margin: 30px;
-}
-
 .result_header {
     padding-top: 20px;
-}
-
-.space {
-    margin: 30px;
 }
 
 #item-row {
     padding: 20px;
     margin-bottom: 20px;
-}
-
-#title-learn {
-    padding: 30px 0;
-    font-size: 16px;
-}
-
-#alert-success {
-    padding: 20px;
-    margin-top: 10px;
-}
-
-.alert {
-    width: 300px;
 }
 
 #search_results {
@@ -206,8 +243,16 @@ body {
     #search_results {
         margin-top: 1.5rem;
     }
-}
-
-.mt-6 {
-    margin-top: 5rem !important;
+    
+    .field-container {
+        max-width: 100% !important;
+    }
+    
+    .feature-card {
+        margin-bottom: 2rem;
+    }
+    
+    .soccer-field-preview {
+        padding: 1rem;
+    }
 }

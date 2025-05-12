@@ -3,18 +3,149 @@
 {% block content %}
 
 
-<!-- Main content -->
+<!-- Main content area -->
+
+<!-- Hero Section with animated soccer ball -->
 <div class="container text-center mt-6 mb-5">
-    <h1 class="title">Understanding Soccer Positioning & Offside Rules</h1>
+    <h1 class="title homepage-title">Understanding Soccer Positioning & Offside Rules</h1>
     <p class="lead">Learn to follow the game like a pro</p>
 </div>
 
+<!-- Interactive Preview Cards -->
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <!-- Quick Preview Card -->
+        <div class="col-md-4 mb-4">
+            <div class="feature-card card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <div class="feature-icon text-center mb-3">
+                        <i class="fas fa-graduation-cap fa-3x" style="color: var(--accent-color);"></i>
+                    </div>
+                    <h5 class="card-title text-center">Learn Interactively</h5>
+                    <p class="card-text flex-grow-1">Master player positions, formations, and offside rules through visual lessons and diagrams.</p>
+                    <a href="/learn/1" class="btn btn-primary mt-auto">Start Learning</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Preview Card -->
+        <div class="col-md-4 mb-4">
+            <div class="feature-card card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <div class="feature-icon text-center mb-3">
+                        <i class="fas fa-question-circle fa-3x" style="color: var(--base-color);"></i>
+                    </div>
+                    <h5 class="card-title text-center">Test Your Knowledge</h5>
+                    <p class="card-text flex-grow-1">Challenge yourself with interactive quizzes to reinforce what you've learned.</p>
+                    <a href="/quiz/1" class="btn btn-success mt-auto">Take Quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Interactive Soccer Field Preview -->
+<div class="container mb-5">
+    <div class="soccer-field-preview text-center">
+        <h3 class="mb-4">Explore the Soccer Field</h3>
+        <div class="field-container position-relative mx-auto" style="max-width: 600px;">
+            <!-- SVG Soccer Field (simplified) -->
+            <svg viewBox="0 0 600 400" class="field-svg">
+                <!-- Field outline -->
+                <rect x="50" y="50" width="500" height="300" fill="var(--base-color)" stroke="white" stroke-width="4"/>
+                
+                <!-- Center circle -->
+                <circle cx="300" cy="200" r="80" fill="none" stroke="white" stroke-width="4"/>
+                <circle cx="300" cy="200" r="3" fill="white"/>
+                
+                <!-- Penalty areas -->
+                <rect x="50" y="125" width="80" height="150" fill="none" stroke="white" stroke-width="4"/>
+                <rect x="470" y="125" width="80" height="150" fill="none" stroke="white" stroke-width="4"/>
+                
+                <!-- Goal areas -->
+                <rect x="50" y="162.5" width="30" height="75" fill="none" stroke="white" stroke-width="4"/>
+                <rect x="520" y="162.5" width="30" height="75" fill="none" stroke="white" stroke-width="4"/>
+                
+                <!-- Penalty spots -->
+                <circle cx="140" cy="200" r="3" fill="white"/>
+                <circle cx="460" cy="200" r="3" fill="white"/>
+                
+                <!-- Center line -->
+                <line x1="300" y1="50" x2="300" y2="350" stroke="white" stroke-width="4"/>
+                
+                <!-- Interactive players (hoverable) -->
+                <g class="player-dots">
+                    <circle class="player" cx="100" cy="200" r="10" fill="#ff4757" data-position="Goalkeeper"/>
+                    <circle class="player" cx="200" cy="150" r="10" fill="#3742fa" data-position="Defender"/>
+                    <circle class="player" cx="200" cy="250" r="10" fill="#3742fa" data-position="Defender"/>
+                    <circle class="player" cx="250" cy="200" r="10" fill="#5f27cd" data-position="Midfielder"/>
+                    <circle class="player" cx="400" cy="200" r="10" fill="#26c281" data-position="Forward"/>
+                </g>
+            </svg>
+        </div>
+        
+        <!-- Position Info Display -->
+        <div class="position-info mt-4">
+            <p class="text-muted">Hover over the colored dots to learn about different player positions!</p>
+            <div id="position-display" class="position-card" style="min-height: 60px;">
+                <strong>Click or hover on a player to see their role</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
 <div class="container text-center mb-5">
-    <a href="/learn/1" class="btn btn-success btn-lg">Start</a>
+    <div class="cta-section p-4 rounded" style="background-color: rgba(34, 139, 34, 0.1);">
+        <h4 class="mb-3">Ready to Master Soccer Positioning?</h4>
+        <p class="mb-4">Start your journey with our interactive lessons and become a soccer expert!</p>
+        <a href="/learn/1" class="btn btn-success btn-lg">Begin Your Journey</a>
+    </div>
 </div>
 
 {% endblock %}
 
 {% block scripts %}
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Interactive player dots
+    const players = document.querySelectorAll('.player');
+    const displayArea = document.getElementById('position-display');
+    
+    const positionInfo = {
+        "Goalkeeper": "The last line of defense. Can use hands within the penalty area.",
+        "Defender": "Prevents the opposition from scoring. Strong in tackling and positioning.",
+        "Midfielder": "The engine of the team, connecting defense and attack.",
+        "Forward": "Main goal scorers focused on the final third of the pitch."
+    };
+    
+    players.forEach(player => {
+        player.addEventListener('mouseenter', function() {
+            const position = this.getAttribute('data-position');
+            displayArea.innerHTML = `<strong>${position}:</strong> ${positionInfo[position]}`;
+        });
+        
+        player.addEventListener('mouseleave', function() {
+            // Reset message could go here if desired
+        });
+        
+        player.addEventListener('click', function() {
+            const position = this.getAttribute('data-position');
+            displayArea.innerHTML = `<strong>${position}:</strong> ${positionInfo[position]}`;
+        });
+    });
+    
+    // Feature cards hover effect
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+</script>
 {% endblock %}
