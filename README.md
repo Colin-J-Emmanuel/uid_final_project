@@ -18,15 +18,19 @@ This project provides a web-based tutorial on soccer positions and the offside r
 │   ├── main.css         # CSS styles
 │   ├── quiz.js          # JavaScript for quiz functionality 
 │   └── images/          # SVG images for soccer positions and quiz scenarios
-│       ├── soccer_field_gk.svg
-│       ├── soccer_field_def.svg
-│       ├── soccer_field_mid.svg
-│       ├── soccer_field_fwd.svg
-│       ├── soccer_formations.svg
-│       ├── formation_quiz.svg
-│       ├── offside_situation.svg
-│       ├── positioning_quiz.svg
 │       ├── field_zones.svg
+│       ├── formation_4_4_2.svg
+│       ├── formation_5_3_2.svg
+│       ├── formation_5_4_1.svg
+│       ├── offside_situation.svg
+│       ├── offside.jpeg
+│       ├── positioning_quiz.svg
+│       ├── soccer_field_def.svg
+│       ├── soccer_field_fwd.svg
+│       ├── soccer_field_generic.svg
+│       ├── soccer_field_gk.svg
+│       ├── soccer_field_mid.svg
+│       ├── soccer_formations.svg
 │       └── tactical_quiz.svg
 └── templates/
     ├── layout.html      # Base template
@@ -71,16 +75,20 @@ mkdir -p static/images
 ```
 
 ### 5. Add Images to Your Project
-Save all the SVG files in the `static/images` directory with the following names:
-- `soccer_field_gk.svg`
-- `soccer_field_def.svg`
-- `soccer_field_mid.svg`
-- `soccer_field_fwd.svg`
-- `soccer_formations.svg`
-- `formation_quiz.svg`
-- `offside_situation.svg`
-- `positioning_quiz.svg`
+Save all the image files in the `static/images` directory with the following names:
 - `field_zones.svg`
+- `formation_4_4_2.svg`
+- `formation_5_3_2.svg`
+- `formation_5_4_1.svg`
+- `offside_situation.svg`
+- `offside.jpeg`
+- `positioning_quiz.svg`
+- `soccer_field_def.svg`
+- `soccer_field_fwd.svg`
+- `soccer_field_generic.svg`
+- `soccer_field_gk.svg`
+- `soccer_field_mid.svg`
+- `soccer_formations.svg`
 - `tactical_quiz.svg`
 
 ### 6. Run the Application
