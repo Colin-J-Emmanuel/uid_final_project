@@ -10,7 +10,34 @@
             </div>
             
             <!-- Main visualization with improved styling -->
-            <img src="{{ item.image }}" class="img-fluid" id="img-style" alt="{{item.title}} image">
+            {% if item.id|int >= 6 and item.id|int <= 8 %}
+                <!-- Formation image with popup functionality -->
+                <div class="formation-image-container position-relative">
+                    <img src="{{ item.image }}" class="img-fluid" id="img-style" alt="{{item.title}} image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#formationModal">
+                    <!-- Small label beneath the image -->
+                    <div class="text-center mt-2">
+                        <small class="text-muted">{{ item.title.replace('The ', '').replace(' Formation', ' formation') }}</small>
+                    </div>
+                </div>
+                
+                <!-- Modal for formation details -->
+                <div class="modal fade" id="formationModal" tabindex="-1" aria-labelledby="formationModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="formationModalLabel">{{ item.title }} - Detailed Breakdown</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                {{ item.detailed_description|nl2br }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <!-- Regular image for other slides -->
+                <img src="{{ item.image }}" class="img-fluid" id="img-style" alt="{{item.title}} image">
+            {% endif %}
         </div>
     </div>
     
@@ -18,22 +45,29 @@
         <!-- Description with improved typography -->
         <p class="desc mt-2">{{item.description}}</p>
         
-        <!-- Key concept highlight box for important information -->
-        <div class="key-concept">
-            <p class="mb-0"><strong>Key Point:</strong> 
-                {% if "Goalkeeper" in item.title %}
-                    Only player who can use hands within the penalty area
-                {% elif "Defenders" in item.title %}
-                    Focus on tackling and positioning to prevent goals
-                {% elif "Midfielders" in item.title %}
-                    Connect defense to attack, control the game's tempo
-                {% elif "Forwards" in item.title %}
-                    Main goal scorers focused on the final third of the pitch
-                {% else %}
-                    Teams use different formations based on tactical approach
-                {% endif %}
-            </p>
-        </div>
+        <!-- Formation advantages/disadvantages for formation slides -->
+        {% if item.id|int >= 6 and item.id|int <= 8 %}
+            <div class="formation-details">
+                {{ item.advantages_disadvantages|nl2br }}
+            </div>
+        {% else %}
+            <!-- Key concept highlight box for other slides -->
+            <div class="key-concept">
+                <p class="mb-0"><strong>Key Point:</strong> 
+                    {% if "Goalkeeper" in item.title %}
+                        Only player who can use hands within the penalty area
+                    {% elif "Defenders" in item.title %}
+                        Focus on tackling and positioning to prevent goals
+                    {% elif "Midfielders" in item.title %}
+                        Connect defense to attack, control the game's tempo
+                    {% elif "Forwards" in item.title %}
+                        Main goal scorers focused on the final third of the pitch
+                    {% else %}
+                        Teams use different formations based on tactical approach
+                    {% endif %}
+                </p>
+            </div>
+        {% endif %}
 
         <!-- Navigation buttons with better styling -->
         <div class="navigation-buttons">
@@ -46,7 +80,7 @@
             {% endif %}
         
             <!-- Conditional logic for Next or Quiz button -->
-            {% if item.id|int < 5 %}
+            {% if item.id|int < 8 %}
                 <!-- Next button -->
                 <a class="btn btn-primary" href="/learn/{{item.id|int + 1}}">Next</a>
             {% else %}
@@ -57,7 +91,7 @@
         
         <!-- Learning progress indicator -->
         <div class="text-center mt-4">
-            <p class="text-muted">Progress: {{ item.id }} of 5</p>
+            <p class="text-muted">Progress: {{ item.id }} of 8</p>
         </div>
     </div>
 </div>
@@ -75,6 +109,20 @@
                 link.classList.add('active');
             }
         });
+        
+        // Add hover effect for formation images
+        const formationImage = document.querySelector('.formation-image-container img');
+        if (formationImage) {
+            formationImage.addEventListener('mouseenter', function() {
+                this.style.opacity = '0.9';
+                this.style.transform = 'scale(1.02)';
+            });
+            
+            formationImage.addEventListener('mouseleave', function() {
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
+        }
     });
 </script>
 {% endblock %}

@@ -1,0 +1,95 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soccer field background -->
+  <rect x="50" y="50" width="700" height="400" fill="#228B22" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Center circle -->
+  <circle cx="400" cy="250" r="60" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <circle cx="400" cy="250" r="2" fill="#ffffff"/>
+  
+  <!-- Center line -->
+  <line x1="400" y1="50" x2="400" y2="450" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Left penalty area -->
+  <rect x="50" y="150" width="100" height="200" fill="none" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Right penalty area -->
+  <rect x="650" y="150" width="100" height="200" fill="none" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Left goal area -->
+  <rect x="50" y="200" width="40" height="100" fill="none" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Right goal area -->
+  <rect x="710" y="200" width="40" height="100" fill="none" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Left penalty spot -->
+  <circle cx="130" cy="250" r="3" fill="#ffffff"/>
+  
+  <!-- Right penalty spot -->
+  <circle cx="670" cy="250" r="3" fill="#ffffff"/>
+  
+  <!-- Corner arcs -->
+  <path d="M 50 50 L 50 70 A 20 20 0 0 1 70 50 L 50 50" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <path d="M 750 50 L 730 50 A 20 20 0 0 1 750 70 L 750 50" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <path d="M 50 450 L 70 450 A 20 20 0 0 1 50 430 L 50 450" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <path d="M 750 450 L 750 430 A 20 20 0 0 1 730 450 L 750 450" fill="none" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Goals -->
+  <rect x="40" y="225" width="10" height="50" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <rect x="750" y="225" width="10" height="50" fill="none" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Penalty arcs -->
+  <path d="M 90 200 A 30 30 0 0 1 90 300" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <path d="M 710 200 A 30 30 0 0 0 710 300" fill="none" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- 5-4-1 Formation Players -->
+  
+  <!-- Goalkeeper -->
+  <circle cx="100" cy="250" r="15" fill="#FF6B6B" stroke="#ffffff" stroke-width="3"/>
+  <text x="100" y="258" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">GK</text>
+  
+  <!-- 5 Defenders -->
+  <!-- Left Wing-back -->
+  <circle cx="200" cy="130" r="12" fill="#4ECDC4" stroke="#ffffff" stroke-width="3"/>
+  <text x="200" y="136" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">LWB</text>
+  
+  <!-- Left Center-back -->
+  <circle cx="200" cy="200" r="12" fill="#4ECDC4" stroke="#ffffff" stroke-width="3"/>
+  <text x="200" y="206" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CB</text>
+  
+  <!-- Central Center-back -->
+  <circle cx="200" cy="250" r="12" fill="#4ECDC4" stroke="#ffffff" stroke-width="3"/>
+  <text x="200" y="256" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CB</text>
+  
+  <!-- Right Center-back -->
+  <circle cx="200" cy="300" r="12" fill="#4ECDC4" stroke="#ffffff" stroke-width="3"/>
+  <text x="200" y="306" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CB</text>
+  
+  <!-- Right Wing-back -->
+  <circle cx="200" cy="370" r="12" fill="#4ECDC4" stroke="#ffffff" stroke-width="3"/>
+  <text x="200" y="376" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">RWB</text>
+  
+  <!-- 4 Midfielders (Diamond Shape) -->
+  <!-- Defensive Midfielder -->
+  <circle cx="320" cy="250" r="12" fill="#45B7D1" stroke="#ffffff" stroke-width="3"/>
+  <text x="320" y="256" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DM</text>
+  
+  <!-- Left Midfielder -->
+  <circle cx="400" cy="200" r="12" fill="#45B7D1" stroke="#ffffff" stroke-width="3"/>
+  <text x="400" y="206" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">LM</text>
+  
+  <!-- Right Midfielder -->
+  <circle cx="400" cy="300" r="12" fill="#45B7D1" stroke="#ffffff" stroke-width="3"/>
+  <text x="400" y="306" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">RM</text>
+  
+  <!-- Attacking Midfielder -->
+  <circle cx="480" cy="250" r="12" fill="#45B7D1" stroke="#ffffff" stroke-width="3"/>
+  <text x="480" y="256" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AM</text>
+  
+  <!-- 1 Forward -->
+  <!-- Striker -->
+  <circle cx="600" cy="250" r="12" fill="#96CEB4" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="256" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ST</text>
+  
+  <!-- Formation label -->
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">5-4-1 Formation</text>
+</svg>

@@ -149,6 +149,53 @@ body {
     border-radius: 0 4px 4px 0;
 }
 
+/* Formation image container */
+.formation-image-container img {
+    transition: all 0.3s ease;
+}
+
+.formation-image-container img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Formation details styling */
+.formation-details {
+    background-color: rgba(34, 139, 34, 0.05);
+    border: 1px solid rgba(34, 139, 34, 0.1);
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.formation-details strong {
+    color: var(--base-color);
+}
+
+/* Modal styling for formation details */
+.modal-header {
+    background: linear-gradient(135deg, var(--accent-color), var(--base-color));
+    color: white;
+    border-radius: 15px 15px 0 0;
+    border-bottom: none;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.modal-body {
+    padding: 2rem;
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.modal-body strong {
+    color: var(--base-color);
+}
+
 /* Navigation buttons */
 .navigation-buttons {
     display: flex;
@@ -352,5 +399,10 @@ body {
     
     .progress-container {
         margin-top: 50px;
+    }
+    
+    .formation-details {
+        padding: 1rem;
+        font-size: 0.95rem;
     }
 }
