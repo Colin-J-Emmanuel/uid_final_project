@@ -103,8 +103,8 @@
 
         if (path.startsWith("/learn/")) {
           let id = parseInt(path.split("/")[2]);
-          // Calculate progress for learn section: 12.5%, 25%, 37.5%, 50%, 62.5%, 75%, 87.5%, 100%
-          progress = (id / 8) * 100;
+          // Calculate progress for learn section: 11.11%, 22.22%, 33.33%, 44.44%, 55.55%, 66.66%, 77.77%, 88.88%, 100%
+          progress = (id / 9) * 100;
           colorClass = "bg-info"; // light blue for learning
           labelText = "Learning Progress";
         } else if (path.startsWith("/quiz/")) {

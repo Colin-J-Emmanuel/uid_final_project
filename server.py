@@ -127,6 +127,28 @@ Detailed Breakdown:
 • **Midfield:** The midfield's role is crucial for controlling the game, dictating the pace, and providing a link between defense and attack.
 • **Strikers:** The strikers should be able to exploit the spaces left by the opposition and create scoring opportunities.
 """
+  },
+  "9": {
+    "id": "9",
+    "title": "Understanding the Offside Rule",
+    "image": "/static/images/offside.jpeg",
+    "description": "In soccer, an offside occurs when a player is in an attacking position, and closer to the opposing team's goal line than both the ball and the second-to-last opponent (excluding the goalkeeper) when a teammate passes the ball to them.",
+    "detailed_description": """
+**Offside Position:**
+A player is in an offside position if, when in the opponent's half of the field, any part of their head, body, or feet is closer to the opponent's goal line than both the ball and the second-last opponent.
+
+**Violation:**
+A player is only penalized for being offside if they are in that position when a teammate passes the ball to them.
+
+**Not a Violation:**
+It's important to note that merely being in an offside position is not a violation. It only becomes an offense if the offside player gains an advantage from that position or interferes with an opponent.
+
+**Example:**
+If a player is even with the last defender when their teammate passes the ball, and the player then runs past the defender, they are not offside, even if they receive the ball in an offside position.
+
+**Free Kick:**
+If a player is deemed offside, the opposing team is awarded a free kick.
+"""
   }
 }
 

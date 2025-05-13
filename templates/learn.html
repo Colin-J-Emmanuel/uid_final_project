@@ -34,6 +34,30 @@
                         </div>
                     </div>
                 </div>
+            {% elif item.id|int == 9 %}
+                <!-- Offside slide with modal functionality -->
+                <div class="formation-image-container position-relative">
+                    <img src="{{ item.image }}" class="img-fluid" id="img-style" alt="{{item.title}} image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#offsideModal">
+                    <!-- Small label beneath the image -->
+                    <div class="text-center mt-2">
+                        <small class="text-muted">Click to see detailed explanation</small>
+                    </div>
+                </div>
+                
+                <!-- Modal for offside rule details -->
+                <div class="modal fade" id="offsideModal" tabindex="-1" aria-labelledby="offsideModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="offsideModalLabel">{{ item.title }} - Detailed Explanation</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                {{ item.detailed_description|nl2br }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% else %}
                 <!-- Regular image for other slides -->
                 <img src="{{ item.image }}" class="img-fluid" id="img-style" alt="{{item.title}} image">
@@ -49,6 +73,11 @@
         {% if item.id|int >= 6 and item.id|int <= 8 %}
             <div class="formation-details">
                 {{ item.advantages_disadvantages|nl2br }}
+            </div>
+        {% elif item.id|int == 9 %}
+            <!-- Extra explanation for offside rule -->
+            <div class="key-concept">
+                <p class="mb-0"><strong>Remember:</strong> Offside is only called when the ball is passed by a teammate and the receiving player gains an advantage from their position.</p>
             </div>
         {% else %}
             <!-- Key concept highlight box for other slides -->
@@ -80,7 +109,7 @@
             {% endif %}
         
             <!-- Conditional logic for Next or Quiz button -->
-            {% if item.id|int < 8 %}
+            {% if item.id|int < 9 %}
                 <!-- Next button -->
                 <a class="btn btn-primary" href="/learn/{{item.id|int + 1}}">Next</a>
             {% else %}
@@ -91,7 +120,7 @@
         
         <!-- Learning progress indicator -->
         <div class="text-center mt-4">
-            <p class="text-muted">Progress: {{ item.id }} of 8</p>
+            <p class="text-muted">Progress: {{ item.id }} of 9</p>
         </div>
     </div>
 </div>
@@ -111,7 +140,7 @@
         });
         
         // Add hover effect for formation images
-        const formationImage = document.querySelector('.formation-image-container img');
+        const formationImage = document.querySelector('.formation-image-container img, .offside-image-container img');
         if (formationImage) {
             formationImage.addEventListener('mouseenter', function() {
                 this.style.opacity = '0.9';
