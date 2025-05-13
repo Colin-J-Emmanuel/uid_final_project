@@ -113,6 +113,10 @@ def view(my_id=None):
   
 @app.route('/quiz/<my_id>')
 def edit(my_id=None):
+    global score
+    # Reset score when starting the quiz (question 1)
+    if my_id == "1":
+        score = 0
     item = quiz_data[my_id]
     return render_template('quiz.html', item=item)
 
